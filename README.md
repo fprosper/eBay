@@ -102,5 +102,9 @@ What architecture-layers did you create and why?
 What would you do if you had more time?
 Which trade-offs did you take?
 
-* FILL-ME 1
-* FILL-ME 2
+* I approached the task using MVVM architecture and Combine to perform the HTTP request. If I had more time I could try using also SfiftUI to develop the UI, as the interface was easy enough to achieve this.
+* Also, not all the UI would behave perfectly, it would have taken more time to create appropriate components to cache images, and also place the checker in perfect alignment.
+* With more time I wuould have created components for singles pieces of UI, i.e cells
+* The trade-offs I took where in UIViewController too much filled with logic, in a proper MVVM more I would have mode other logic, including the cells login into the view model.
+
+It's not great, it works, you wanted 4hrs those are mine 4 hours.

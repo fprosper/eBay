@@ -12,6 +12,7 @@ class ViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var pagerTextField: UITextField!
     
     private let id = "1118635128"
     
@@ -20,6 +21,7 @@ class ViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         let viewModel = AdViewModel(with: id)
         self.viewModel = viewModel
@@ -30,6 +32,19 @@ class ViewController: BaseViewController {
                 self?.render(state)
             }
             .store(in: &cancellable)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ShowImage":
+            if let vc = segue.destination as? ImageViewController,
+                let index = sender as? Int,
+                let url = viewModel?.smallImageViewURLs[index] {
+                vc.imageURL = url
+            }
+        default:
+            break
+        }
     }
     
     // MARK: - Private
@@ -53,6 +68,7 @@ class ViewController: BaseViewController {
                 self.loader.stopAnimating()
                 // evaluate and load data in tableview
                 if let _ = self.viewModel {
+                    self.pagerTextField.text = "1/\(self.viewModel?.smallImageViewURLs.count ?? 0)"
                     self.collectionView.reloadData()
                     self.tableView.reloadData()
                 }
@@ -60,6 +76,15 @@ class ViewController: BaseViewController {
         }
     }
 }
+
+// MARK: - UICollectionViewDataSource
+extension ViewController: UIScrollViewDelegate{
+        func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+            let pageWidth = self.collectionView.frame.size.width
+            let currentPage = Int(self.collectionView.contentOffset.x / pageWidth) + 1
+            pagerTextField.text = "\(currentPage)/\(viewModel?.smallImageViewURLs.count ?? 0)"
+        }
+    }
 
 // MARK: - UICollectionViewDataSource
 extension ViewController: UICollectionViewDataSource {
@@ -83,6 +108,7 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowImage", sender: indexPath.row)
     }
     
 }

@@ -19,6 +19,8 @@
 		491D89AF27C8B8C000DA0182 /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D89AE27C8B8C000DA0182 /* FeatureCell.swift */; };
 		491D89B427C8C71800DA0182 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D89B327C8C71800DA0182 /* DocumentCell.swift */; };
 		491D89B627C8CE6F00DA0182 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D89B527C8CE6F00DA0182 /* DescriptionCell.swift */; };
+		491D89B827CB78F100DA0182 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D89B727CB78F100DA0182 /* ImageViewController.swift */; };
+		491D89BA27CB7BAB00DA0182 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 491D89B927CB7BAB00DA0182 /* README.md */; };
 		521B910E25CBDCD400ECEC42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B910D25CBDCD400ECEC42 /* AppDelegate.swift */; };
 		521B911025CBDCD400ECEC42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B910F25CBDCD400ECEC42 /* SceneDelegate.swift */; };
 		521B911225CBDCD400ECEC42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B911125CBDCD400ECEC42 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		491D89AE27C8B8C000DA0182 /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
 		491D89B327C8C71800DA0182 /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
 		491D89B527C8CE6F00DA0182 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		491D89B727CB78F100DA0182 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		491D89B927CB7BAB00DA0182 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		521B910A25CBDCD400ECEC42 /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521B910D25CBDCD400ECEC42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		521B910F25CBDCD400ECEC42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 		521B911625CBDCD600ECEC42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521B911925CBDCD600ECEC42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		521B911B25CBDCD600ECEC42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		521B912225CBDD1500ECEC42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		521B912625CBDDE200ECEC42 /* Design.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Design.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +85,7 @@
 				521B911325CBDCD400ECEC42 /* Main.storyboard */,
 				491D899F27C3FE1200DA0182 /* BaseViewController.swift */,
 				521B911125CBDCD400ECEC42 /* ViewController.swift */,
+				491D89B727CB78F100DA0182 /* ImageViewController.swift */,
 				491D89B027C8C54900DA0182 /* Cells */,
 			);
 			path = View;
@@ -119,7 +123,7 @@
 		521B910C25CBDCD400ECEC42 /* CodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				521B912225CBDD1500ECEC42 /* README.md */,
+				491D89B927CB7BAB00DA0182 /* README.md */,
 				491D89B227C8C5B100DA0182 /* Support Files */,
 				491D89B127C8C57F00DA0182 /* View */,
 				491D89A627C679A100DA0182 /* Extensions.swift */,
@@ -194,6 +198,7 @@
 			files = (
 				521B911A25CBDCD600ECEC42 /* LaunchScreen.storyboard in Resources */,
 				521B911725CBDCD600ECEC42 /* Assets.xcassets in Resources */,
+				491D89BA27CB7BAB00DA0182 /* README.md in Resources */,
 				521B911525CBDCD400ECEC42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +216,7 @@
 				491D89A727C679A100DA0182 /* Extensions.swift in Sources */,
 				521B910E25CBDCD400ECEC42 /* AppDelegate.swift in Sources */,
 				491D89AF27C8B8C000DA0182 /* FeatureCell.swift in Sources */,
+				491D89B827CB78F100DA0182 /* ImageViewController.swift in Sources */,
 				491D89B427C8C71800DA0182 /* DocumentCell.swift in Sources */,
 				491D899E27C29E3400DA0182 /* Fetcher.swift in Sources */,
 				521B911025CBDCD400ECEC42 /* SceneDelegate.swift in Sources */,
